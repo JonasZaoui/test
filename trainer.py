@@ -209,3 +209,7 @@ start = datetime.now()
 print('Training started at', start)
 trainer.fit(model=model, datamodule=data)
 print('Training duration:', datetime.now() - start)
+
+
+
+torch.save(model.state_dict(), '/network/lustre/iss02/cati/collabs/cmbs/training_jonas/model_weights.pth')
